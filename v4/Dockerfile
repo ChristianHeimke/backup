@@ -9,7 +9,7 @@ RUN gem install backup -v '~> 4.0' \
 
 RUN apk del build-dependencies
 
-ADD Backup /backup
+ADD v4/Backup /backup
 
 WORKDIR /backup
 
