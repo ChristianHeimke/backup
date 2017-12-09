@@ -6,6 +6,14 @@ It will backup a postgres database and ruby on rails path in time via cron.
 The database should belinked to the container, and the rails path mounted as volume. 
 The storage has been configured via SFTPm you got notifications via Slack,
 
+## Versions
+
+### v4
+Uses backup gem v4.4.x and postgresql 9.5.x
+
+### v5.beta
+Uses backup gem v5.x beta and postgresql 9.6.x
+
 ## Usage
 Feel free to change the config for your needs and rebuild the image:
 
