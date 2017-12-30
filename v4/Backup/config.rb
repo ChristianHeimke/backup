@@ -21,7 +21,7 @@ Storage::SFTP.defaults do |server|
 end
 
 if ENV.has_key?('LOCAL_STORAGE_PATH')
-  Storage::Local do |local|
+  Storage::Local.defaults do |local|
     local.path = ENV['LOCAL_STORAGE_PATH']  
   end
 end

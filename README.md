@@ -34,6 +34,7 @@ tested in an rancher environment.
 | SFTP_HOST           | sftp host or ip       |           |
 | SFTP_PORT           | sftp port             | 22        |
 | SFTP_PATH           | sftp path             | ~/        |
+| LOCAL_STORAGE_PATH  | path to shared volume |           |
 | SLACK_URL           | incomming web hook url|           |
 | SLACK_ON_SUCCESS    | post on success       | true      |
 | SLACK_ON_WARNING    | post on warning       | true      |
@@ -47,10 +48,12 @@ tested in an rancher environment.
 | POSTGRES_PORT       | DB port               | 5432      |
 | POSTGRES_OPTIONS    | backup options        |           |
 | POSTGRES_KEEP       | backup count          | 5         |
+| POSTGRES_KEEP_LOCAL | backup count          | 5         |
 | ENABLE_RAILS_BACKUP | enable postgres       |           |
 | CRON_RAILS          | cron string to run    |           |
 | RAILS_PATH          | volume mount path     |           |
 | RAILS_KEEP          | backup count          | 5         |
+| RAILS_KEEP_LOCAL    | backup count          | 5         |
 
 
 
