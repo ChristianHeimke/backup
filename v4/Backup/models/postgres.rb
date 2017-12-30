@@ -16,4 +16,9 @@ Model.new(:postgres, 'db backup') do
     server.keep          = ENV['POSTGRES_KEEP']       || 5
   end
 
+  if ENV.has_key?('LOCAL_STORAGE_PATH')
+    store_with Local do |local|
+      local.keep = ENV['POSTGRES_KEEP_LOCAL'] || 5
+    end
+  end
 end

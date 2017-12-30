@@ -20,6 +20,12 @@ Storage::SFTP.defaults do |server|
   server.path         = ENV['SFTP_PATH']  || '~/'
 end
 
+if ENV.has_key?('LOCAL_STORAGE_PATH')
+  Storage::Local do |local|
+    local.path = ENV['LOCAL_STORAGE_PATH']  
+  end
+end
+
 Notifier::Slack.defaults do |slack|
   slack.on_success = ENV['SLACK_ON_SUCCESS'] || true 
   slack.on_warning = ENV['SLACK_ON_WARNING'] || true

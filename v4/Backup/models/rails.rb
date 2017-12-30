@@ -8,7 +8,13 @@ Model.new(:rails, 'rails backup') do
   end
 
   store_with SFTP do |server|
-    server.keep = ENV['RAILS_KEEP']   || 5
+    server.keep = ENV['RAILS_KEEP'] || 5
+  end
+
+  if ENV.has_key?('LOCAL_STORAGE_PATH')
+    store_with Local do |local|
+      local.keep = ENV['RAILS_KEEP_LOCAL'] || 5
+    end
   end
 
 end
